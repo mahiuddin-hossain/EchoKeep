@@ -1,6 +1,5 @@
 package com.suitexen.echokeep.ui.fragments;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,69 +7,60 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.data.BarData;
-import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
 import com.suitexen.echokeep.R;
 
-import java.util.ArrayList;
-
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link StatsFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
 public class StatsFragment extends Fragment {
 
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    public StatsFragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment StatsFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static StatsFragment newInstance(String param1, String param2) {
+        StatsFragment fragment = new StatsFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_stats, container, false);
-
-        // Demo Data for Cards
-        setupSummaryCards(view);
-
-        // Setup Chart
-        BarChart barChart = view.findViewById(R.id.barChartHistory);
-        setupBarChart(barChart);
-
-        return view;
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
     }
 
-    private void setupSummaryCards(View v) {
-        // Find views within the layouts and set data
-        ((TextView) v.findViewById(R.id.tvFoodValue)).setText("12.4 kg");
-        ((TextView) v.findViewById(R.id.tvFoodLabel)).setText("Food Saved");
-
-        ((TextView) v.findViewById(R.id.tvMoneyValue)).setText("$64.20");
-        ((TextView) v.findViewById(R.id.tvMoneyLabel)).setText("Money Saved");
-        ((ImageView) v.findViewById(R.id.ivMoneyIcon)).setImageResource(R.drawable.ic_money);
-
-        ((TextView) v.findViewById(R.id.tvCO2Value)).setText("28.5 kg");
-        ((TextView) v.findViewById(R.id.tvCO2Label)).setText("CO2 Reduced");
-        ((ImageView) v.findViewById(R.id.ivCO2Icon)).setImageResource(R.drawable.ic_eco);
-    }
-
-    private void setupBarChart(BarChart barChart) {
-        ArrayList<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(1, 40));
-        entries.add(new BarEntry(2, 60));
-        entries.add(new BarEntry(3, 30));
-        entries.add(new BarEntry(4, 80));
-        entries.add(new BarEntry(5, 50));
-        entries.add(new BarEntry(6, 70));
-
-        BarDataSet dataSet = new BarDataSet(entries, "Impact");
-        dataSet.setColor(Color.parseColor("#23bc4a")); // Primary Green
-        dataSet.setDrawValues(false);
-
-        BarData data = new BarData(dataSet);
-        data.setBarWidth(0.5f);
-
-        barChart.setData(data);
-        barChart.getDescription().setEnabled(false);
-        barChart.getLegend().setEnabled(false);
-        barChart.getAxisRight().setEnabled(false);
-        barChart.getXAxis().setDrawGridLines(false);
-        barChart.animateY(1000);
-        barChart.invalidate();
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_stats, container, false);
     }
 }

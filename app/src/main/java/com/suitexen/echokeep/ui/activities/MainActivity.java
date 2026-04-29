@@ -41,21 +41,23 @@ public class MainActivity extends AppCompatActivity {
         }
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
+            Fragment selectedFragment = null;
             int itemId = item.getItemId();
+
             if (itemId == R.id.nav_home) {
-                loadFragment(new HomeFragment());
-                return true;
+                selectedFragment = new HomeFragment();
             } else if (itemId == R.id.nav_inventory) {
-                loadFragment(new InventoryFragment());
-                return true;
+                selectedFragment = new InventoryFragment();
             } else if (itemId == R.id.nav_recipes) {
-                loadFragment(new RecipesFragment());
-                return true;
+                selectedFragment = new RecipesFragment();
             } else if (itemId == R.id.nav_stats) {
-                loadFragment(new StatsFragment());
-                return true;
+                selectedFragment = new StatsFragment();
             } else if (itemId == R.id.nav_profile) {
-                loadFragment(new ProfileFragment());
+                selectedFragment = new ProfileFragment();
+            }
+
+            if (selectedFragment != null) {
+                loadFragment(selectedFragment);
                 return true;
             }
             return false;
@@ -63,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.fragment_container, fragment);
-        transaction.commit();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 }

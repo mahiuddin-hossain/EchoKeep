@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:padding="20dp"
-    tools:context=".AddInventoryActivity">
+    tools:context=".ui.activities.AddInventoryActivity">
 
     <!-- Header Section -->
     <ImageView
