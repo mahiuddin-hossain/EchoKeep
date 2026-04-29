@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EchoKeep" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="colorSecondaryContainer">@color/my_light_primary_container</item>
+    </style>
+
+    <style name="Theme.EchoKeep" parent="Base.Theme.EchoKeep" />
+</resources>

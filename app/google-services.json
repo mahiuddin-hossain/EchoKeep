@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "744379183617",
+    "project_id": "echokeep-74077",
+    "storage_bucket": "echokeep-74077.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744379183617:android:caa100913a2c4674338600",
+        "android_client_info": {
+          "package_name": "com.suitexen.echokeep"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVYGVkMt8kwlGQigRaxt7niLzssn_qWtQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

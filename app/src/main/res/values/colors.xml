@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="my_light_primary">#23bc4a</color>
+    <color name="my_light_primary_container">#D4F5DC</color>
+    <color name="background">#fdfdfe</color>
+    <color name="text_color">#1a2733</color>
+    <color name="card_shade">#F6F6F6</color>
+</resources>
