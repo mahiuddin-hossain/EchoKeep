@@ -1,4 +1,4 @@
-package com.suitexen.echokeep;
+package com.suitexen.ecokeep;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.suitexen.echokeep", appContext.getPackageName());
+        assertEquals("com.suitexen.ecokeep", appContext.getPackageName());
     }
 }

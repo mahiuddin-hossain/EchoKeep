@@ -1,4 +1,4 @@
-package com.suitexen.echokeep.ui.activities;
+package com.suitexen.ecokeep.ui.activities;
 
 import android.os.Bundle;
 
@@ -8,7 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.suitexen.echokeep.R;
+import com.suitexen.ecokeep.R;
 
 public class AddInventoryActivity extends AppCompatActivity {
 

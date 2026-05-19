@@ -1,4 +1,4 @@
-package com.suitexen.echokeep;
+package com.suitexen.ecokeep;
 
 import org.junit.Test;
 

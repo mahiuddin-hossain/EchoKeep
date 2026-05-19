@@ -1,4 +1,4 @@
-package com.suitexen.echokeep.ui.activities;
+package com.suitexen.ecokeep.ui.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -19,8 +19,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.suitexen.echokeep.R;
-import com.suitexen.echokeep.viewmodels.AuthViewModel;
+import com.suitexen.ecokeep.R;
+import com.suitexen.ecokeep.viewmodels.AuthViewModel;
 
 public class SignUpActivity extends AppCompatActivity {
 

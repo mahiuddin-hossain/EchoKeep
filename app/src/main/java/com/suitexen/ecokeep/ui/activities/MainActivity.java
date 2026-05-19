@@ -1,4 +1,4 @@
-package com.suitexen.echokeep.ui.activities;
+package com.suitexen.ecokeep.ui.activities;
 
 import android.os.Bundle;
 
@@ -8,16 +8,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.suitexen.echokeep.R;
-import com.suitexen.echokeep.ui.fragments.HomeFragment;
-import com.suitexen.echokeep.ui.fragments.InventoryFragment;
-import com.suitexen.echokeep.ui.fragments.ProfileFragment;
-import com.suitexen.echokeep.ui.fragments.RecipesFragment;
-import com.suitexen.echokeep.ui.fragments.StatsFragment;
+import com.suitexen.ecokeep.R;
+import com.suitexen.ecokeep.ui.fragments.HomeFragment;
+import com.suitexen.ecokeep.ui.fragments.InventoryFragment;
+import com.suitexen.ecokeep.ui.fragments.ProfileFragment;
+import com.suitexen.ecokeep.ui.fragments.RecipesFragment;
+import com.suitexen.ecokeep.ui.fragments.StatsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

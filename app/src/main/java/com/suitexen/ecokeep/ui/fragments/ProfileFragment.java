@@ -1,4 +1,4 @@
-package com.suitexen.echokeep.ui.fragments;
+package com.suitexen.ecokeep.ui.fragments;
 
 import android.os.Bundle;
 
@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.suitexen.echokeep.R;
+import com.suitexen.ecokeep.R;
 
 
 public class ProfileFragment extends Fragment {

@@ -1,4 +1,4 @@
-package com.suitexen.echokeep.repositories;
+package com.suitexen.ecokeep.repositories;
 
 import androidx.lifecycle.MutableLiveData;
 
@@ -7,7 +7,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.suitexen.echokeep.models.User;
+import com.suitexen.ecokeep.models.User;
 
 public class AuthRepository {
     private final FirebaseAuth firebaseAuth;

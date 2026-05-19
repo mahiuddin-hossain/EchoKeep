@@ -1,4 +1,4 @@
-package com.suitexen.echokeep.models;
+package com.suitexen.ecokeep.models;
 
 public class User {
     private String uid;

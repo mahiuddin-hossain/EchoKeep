@@ -1,12 +1,12 @@
-package com.suitexen.echokeep.viewmodels;
+package com.suitexen.ecokeep.viewmodels;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
+
 import com.google.firebase.auth.FirebaseUser;
-import com.suitexen.echokeep.repositories.AuthRepository;
+import com.suitexen.ecokeep.repositories.AuthRepository;
 
 public class AuthViewModel extends AndroidViewModel {
     private final AuthRepository authRepository;

@@ -1,4 +1,4 @@
-package com.suitexen.echokeep.ui.activities;
+package com.suitexen.ecokeep.ui.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -26,8 +26,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
-import com.suitexen.echokeep.R;
-import com.suitexen.echokeep.viewmodels.AuthViewModel;
+import com.suitexen.ecokeep.R;
+import com.suitexen.ecokeep.viewmodels.AuthViewModel;
 
 public class LoginActivity extends AppCompatActivity {
 

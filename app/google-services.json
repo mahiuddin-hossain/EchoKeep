@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "744379183617",
-    "project_id": "echokeep-74077",
-    "storage_bucket": "echokeep-74077.firebasestorage.app"
+    "project_number": "922406340680",
+    "project_id": "ecokeep-b3576",
+    "storage_bucket": "ecokeep-b3576.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:744379183617:android:caa100913a2c4674338600",
+        "mobilesdk_app_id": "1:922406340680:android:1b37ff303a5a9229a0707d",
         "android_client_info": {
-          "package_name": "com.suitexen.echokeep"
+          "package_name": "com.suitexen.ecokeep"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "922406340680-54bj0rj3ck770bh0ffnrvs05lmcfs09e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.suitexen.ecokeep",
+            "certificate_hash": "315de11a7ec12189f3cbf4a4d32eeb4984a26974"
+          }
+        },
+        {
+          "client_id": "922406340680-fmoltoolvge9nlgl5tgrgsartrltab9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyAVYGVkMt8kwlGQigRaxt7niLzssn_qWtQ"
+          "current_key": "AIzaSyBAnU4vBIDQPr8IXi-z1zfET7WCvX8lhak"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922406340680-fmoltoolvge9nlgl5tgrgsartrltab9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
