@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="my_light_primary">#23bc4a</color>
+    <color name="brand_green">#22C55E</color>
     <color name="my_light_primary_container">#D4F5DC</color>
     <color name="background">#fdfdfe</color>
     <color name="text_color">#1a2733</color>

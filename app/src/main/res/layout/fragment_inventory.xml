@@ -41,6 +41,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
         <EditText
+            android:id="@+id/etSearch"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -69,62 +70,116 @@
         android:scrollbars="none"
         app:layout_constraintTop_toBottomOf="@id/searchLayout">
 
-        <LinearLayout
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgFilterCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp">
+            android:paddingHorizontal="16dp"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedChip="@+id/chipAll"
+            app:singleLine="true">
 
-            <TextView
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/chip_active"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="8dp"
                 android:text="All"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                app:chipCornerRadius="12dp"
+                app:chipStrokeWidth="0dp" />
 
-            <TextView
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFilterVeg"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/chip_inactive"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="8dp"
-                android:text="Veggies"
-                android:textColor="@color/text_color" />
+                android:text="Vegetables"
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                app:chipCornerRadius="12dp"
+                app:chipStrokeWidth="0dp" />
 
-            <!-- Add more categories as needed -->
-            <TextView
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFilterFruits"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/chip_inactive"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="8dp"
                 android:text="Fruits"
-                android:textColor="@color/text_color" />
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                app:chipCornerRadius="12dp"
+                app:chipStrokeWidth="0dp" />
 
-            <TextView
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFilterDairy"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/chip_inactive"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="8dp"
                 android:text="Dairy"
-                android:textColor="@color/text_color" />
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                app:chipCornerRadius="12dp"
+                app:chipStrokeWidth="0dp" />
 
-            <TextView
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFilterMeat"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/chip_inactive"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="8dp"
                 android:text="Meat"
-                android:textColor="@color/text_color" />
-        </LinearLayout>
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                app:chipCornerRadius="12dp"
+                app:chipStrokeWidth="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFilterFrozen"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frozen"
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                app:chipCornerRadius="12dp"
+                app:chipStrokeWidth="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFilterSnacks"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snacks"
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                app:chipCornerRadius="12dp"
+                app:chipStrokeWidth="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFilterDrinks"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drinks"
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                app:chipCornerRadius="12dp"
+                app:chipStrokeWidth="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFilterOthers"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                app:chipCornerRadius="12dp"
+                app:chipStrokeWidth="0dp" />
+
+        </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
 
     <!-- Inventory RecyclerView -->
