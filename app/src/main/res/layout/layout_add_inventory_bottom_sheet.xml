@@ -206,6 +206,25 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Price / Cost -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="Estimated Price / Cost"
+            android:textColor="@color/text_color"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/search_bg"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="16dp" />
+
         <!-- Expiry Date -->
         <TextView
             android:layout_width="wrap_content"

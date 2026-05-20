@@ -179,10 +179,11 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/tvInventoryCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="32"
+                        android:text="0"
                         android:textColor="@color/text_color"
                         android:textSize="32sp"
                         android:textStyle="bold" />
@@ -224,10 +225,11 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/tvSavingsAmount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="$64.20"
+                        android:text="$0.00"
                         android:textColor="@color/text_color"
                         android:textSize="28sp"
                         android:textStyle="bold" />
@@ -266,6 +268,7 @@
 
             <!-- Action 1: Scan Receipt -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardScanReceipt"
                 android:layout_width="0dp"
                 android:layout_height="110dp"
                 android:layout_margin="4dp"
@@ -301,6 +304,7 @@
 
             <!-- Action 2: Add Item -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardAddItem"
                 android:layout_width="0dp"
                 android:layout_height="110dp"
                 android:layout_margin="4dp"
@@ -336,6 +340,7 @@
 
             <!-- Action 3: Find Recipe -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardFindRecipe"
                 android:layout_width="0dp"
                 android:layout_height="110dp"
                 android:layout_margin="4dp"

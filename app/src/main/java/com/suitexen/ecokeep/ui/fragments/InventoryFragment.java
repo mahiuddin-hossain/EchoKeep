@@ -124,6 +124,12 @@ public class InventoryFragment extends Fragment {
         fabAdd.setOnClickListener(v -> showAddFoodBottomSheet());
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadInventoryData();
+    }
+
     private void setupRecyclerView() {
         rvInventory.setLayoutManager(new LinearLayoutManager(getContext()));
         loadInventoryData();
@@ -159,6 +165,7 @@ public class InventoryFragment extends Fragment {
         EditText etFoodName = sheetView.findViewById(R.id.etFoodName);
         ChipGroup cgCategory = sheetView.findViewById(R.id.cgCategory);
         EditText etQuantity = sheetView.findViewById(R.id.etQuantity);
+        EditText etPrice = sheetView.findViewById(R.id.etPrice);
         Spinner spinnerUnit = sheetView.findViewById(R.id.spinnerUnit);
         LinearLayout btnDatePicker = sheetView.findViewById(R.id.btnDatePicker);
         TextView tvExpiryDate = sheetView.findViewById(R.id.tvExpiryDate);
@@ -197,6 +204,7 @@ public class InventoryFragment extends Fragment {
         btnSave.setOnClickListener(v -> {
             String name = etFoodName.getText().toString().trim();
             String quantityStr = etQuantity.getText().toString().trim();
+            String priceStr = etPrice.getText().toString().trim();
             EditText etNotes = sheetView.findViewById(R.id.etNotes);
             String notes = etNotes.getText().toString().trim();
             
@@ -213,12 +221,13 @@ public class InventoryFragment extends Fragment {
             }
 
             double quantity = Double.parseDouble(quantityStr);
+            double price = priceStr.isEmpty() ? 0.0 : Double.parseDouble(priceStr);
             String unit = spinnerUnit.getSelectedItem().toString();
             long expiryDate = expiryCalendar.getTimeInMillis();
             boolean reminder = switchReminder.isChecked();
 
             // Create FoodItem object
-            FoodItem newItem = new FoodItem(name, category, quantity, unit, expiryDate, selectedImageUri, notes, reminder, System.currentTimeMillis());
+            FoodItem newItem = new FoodItem(name, category, quantity, unit, expiryDate, selectedImageUri, notes, reminder, price, System.currentTimeMillis());
 
             // Save to Database (Room)
             AppDatabase.getInstance(requireContext()).foodDao().insert(newItem);

@@ -12,6 +12,7 @@ firebaseAnalytics = "23.2.0"
 legacySupportV4 = "1.0.0"
 room = "2.6.1"
 glide = "4.16.0"
+activityKtx = "1.13.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -26,6 +27,7 @@ legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", ver
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

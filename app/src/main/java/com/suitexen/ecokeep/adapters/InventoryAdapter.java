@@ -1,5 +1,6 @@
 package com.suitexen.ecokeep.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.suitexen.ecokeep.R;
 import com.suitexen.ecokeep.models.FoodItem;
+import com.suitexen.ecokeep.ui.activities.InventoryInfoActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -37,8 +39,15 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         FoodItem item = foodItemList.get(position);
         holder.tvItemName.setText(item.getName());
-        holder.tvWeight.setText(String.format(Locale.getDefault(), "%.1f %s", item.getQuantity(), item.getUnit()));
+        String weightPrice = String.format(Locale.getDefault(), "%.1f %s • $%.2f", item.getRemainingQuantity(), item.getUnit(), item.getPrice());
+        holder.tvWeight.setText(weightPrice);
         holder.tvExpiry.setText("Expires: " + dateFormat.format(item.getExpiryDate()));
+        
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), InventoryInfoActivity.class);
+            intent.putExtra("FOOD_ID", item.getId());
+            v.getContext().startActivity(intent);
+        });
         
         if (item.getImageUri() != null && !item.getImageUri().isEmpty()) {
             Glide.with(holder.itemView.getContext())
